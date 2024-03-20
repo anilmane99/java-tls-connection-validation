@@ -18,10 +18,9 @@ java SSLValidator <url> <port> <truststorePath> <truststorePassword> [truststore
 <truststorePath>: The file path to the truststore containing trusted certificates.
 <truststorePassword>: The password for accessing the truststore.
 [truststoreType] (optional): The type of the truststore (default is "JKS").
-SSL Validation Process
-The SSLValidator class performs the following steps to validate SSL connections:
 ```
-
+### SSL Validation Process
+The SSLValidator class performs the following steps to validate SSL connections:
 `Loading Truststore:` Load the truststore file specified by the user, containing trusted certificates.
 `Creating TrustManagerFactory:` Create a TrustManagerFactory instance using the loaded truststore.
 `Initializing SSLContext:` Initialize an SSLContext object with the TrustManagerFactory, enabling SSL communication with trusted certificates.
