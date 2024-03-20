@@ -22,12 +22,19 @@ java SSLValidator <url> <port> <truststorePath> <truststorePassword> [truststore
 ### SSL Validation Process
 The SSLValidator class performs the following steps to validate SSL connections:
 `Loading Truststore:` Load the truststore file specified by the user, containing trusted certificates.
+
 `Creating TrustManagerFactory:` Create a TrustManagerFactory instance using the loaded truststore.
+
 `Initializing SSLContext:` Initialize an SSLContext object with the TrustManagerFactory, enabling SSL communication with trusted certificates.
+
 `Setting SSLSocketFactory:` Set a custom SSLSocketFactory to the HttpsURLConnection, enabling it to use the SSL context for secure connections.
+
 `Establishing HTTPS Connection:` Construct an HttpsURLConnection object with the specified URL and port, and establish the HTTPS connection.
+
 `Validating Server Certificate:` Retrieve the SSL certificate of the server, extract its details such as subject, issuer, and validity period, and print them to the console.
+
 `Handling Connection Status:` Check the response code of the connection. If the response code is HTTP_OK, the connection is successful; otherwise, display an error message.
+
 `Disconnecting:` Disconnect the HTTPS connection.
 ### Example
 Here's an example command to validate an SSL connection using `SSLValidator`:
